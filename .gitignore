@@ -1,6 +1,9 @@
-
 assets/scss/.sass-cache/
 assets/scss/css/
 assets/scss/config.codekit
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
 
 *.scssc

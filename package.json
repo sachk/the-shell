@@ -7,7 +7,7 @@
         "posts_per_page": 10
     },
     "engines": {
-        "ghost": ">=2.0.0"
+        "ghost": ">=1.0.0"
     },
     "license": "MIT",
     "author": {

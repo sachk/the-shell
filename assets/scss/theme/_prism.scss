@@ -1,14 +1,14 @@
 @font-face {
-  font-family: 'Inconsolata Regular';
-  src: url("../fonts/InconsolataRegular.woff2") format("woff2");
-  src: url("../fonts/InconsolataRegular.woff") format("woff");
+  font-family: 'Inconsolata-g';
+  src: url("../fonts/Inconsolata-g.woff2") format("woff2");
+  src: url("../fonts/Inconsolata-g.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
-code, pre {
+code {
 
-  font-family: "Inconsolata Regular", Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  font-family: "Inconsolata-g", Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace !important;
 
 }
 
