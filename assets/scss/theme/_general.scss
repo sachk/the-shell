@@ -2,6 +2,22 @@
    2. General - Setting up some base styles
    ========================================================================== */
 
+@font-face {
+    font-family: 'Nexa Bold';
+    src: url("../fonts/NexaBold.woff2") format("woff2");
+    src: url("../fonts/NexaBold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inconsolata Regular';
+    src: url("../fonts/InconsolataRegular.woff2") format("woff2");
+    src: url("../fonts/InconsolataRegular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     height: 100%;
     max-height: 100%;
@@ -11,11 +27,16 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Nexa Bold", "Calibri", sans-serif;
     font-size: 2.0rem;
     line-height: 1.6em;
     color: $text;
     background: $background
+}
+
+code, pre {
+
+    font-family: "Inconsolata Regular", Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
 }
 
 ::selection {
@@ -195,8 +216,8 @@ kbd {
     font-weight: bold;
     background: #f4f4f4;
     border-radius: 4px;
-    box-shadow: 
-        0 1px 0 rgba(0, 0, 0, 0.2), 
+    box-shadow:
+        0 1px 0 rgba(0, 0, 0, 0.2),
         0 1px 0 0 #fff inset;
 }
 

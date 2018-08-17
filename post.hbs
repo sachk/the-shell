@@ -29,11 +29,11 @@
         <section class="post-content">
             {{content}}
         </section>
-        
-        <div id="disqus_thread"></div>
+
+        <!-- <div id="disqus_thread"></div>
         <script type="text/javascript">
-            var disqus_shortname = d_id; 
-        
+            var disqus_shortname = d_id;
+
             /* * * DON'T EDIT BELOW THIS LINE * * */
             (function() {
                 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -43,7 +43,7 @@
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        
+         -->
 
         <footer class="post-footer">
 
@@ -54,7 +54,14 @@
                 </section>
             {{/if}}
 
-            <section class="share">
+            {{#if @labs.subscribers}}
+               <section class="author subscribe-form">
+                 <p>Tu peux me laisser ton adresse email si tu veux être averti·e des nouvelles parutions</p>
+                 {{subscribe_form placeholder="Adresse email"}}
+               </section>
+             {{/if}}
+
+            <!-- <section class="share">
                 <h4>Share this</h4>
                 <a class="icon-twitter" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
@@ -68,7 +75,7 @@
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <span class="hidden">Google+</span>
                 </a>
-            </section>
+            </section> -->
 
         </footer>
 
