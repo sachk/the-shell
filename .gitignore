@@ -7,3 +7,5 @@ assets/scss/config.codekit
 *.scss.map
 
 *.scssc
+
+release.zip
