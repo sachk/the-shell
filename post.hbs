@@ -8,16 +8,6 @@
     <article class="{{post_class}}">
 
         {{! Each post has the blog logo at the top, with a link back to the home page }}
-        <header class="post-header">
-            <a id="blog-logo" href="{{@blog.url}}">
-                {{#if @blog.logo}}
-                    <img src="{{@blog.logo}}" alt="Blog Logo" />
-                {{else}}
-                    {{@blog.title}}
-                {{/if}}
-            </a>
-        </header>
-
         {{! Everything inside the #post tags pulls data from the post }}
         {{#post}}
 
@@ -47,17 +37,19 @@
 
         <footer class="post-footer">
 
-            {{#if author}}
+            {{#if @primary_author}}
                 <section class="author">
-                    <h4>{{author.name}}</h4>
-                    <p>{{author.bio}}</p>
+                    <h4>{{primary_author.name}}</h4>
+                    <p>{{primary_author.bio}}</p>
                 </section>
             {{/if}}
 
             {{#if @labs.subscribers}}
                <section class="author subscribe-form">
-                 <p>Tu peux me laisser ton adresse email si tu veux être averti·e des nouvelles parutions</p>
-                 {{subscribe_form placeholder="Adresse email"}}
+                 <p>Subscribe to recevie updates via email</p>
+                 {{subscribe_form placeholder="e@mail.com"}}
+                <span class="gh-subscribe-rss">or subscribe <a href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/">via RSS</a> with Feedly!</span>
+
                </section>
              {{/if}}
 
