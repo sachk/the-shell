@@ -1,0 +1,83 @@
+/* ==========================================================================
+   6. Sidebar
+   ========================================================================== */
+
+.sidebar {
+
+    background-color: $sidebar;
+	height: 100%;
+	min-width: 360px;
+	position: relative;
+	flex-grow: 1;
+}
+
+.sidebar-inner {
+
+	margin: auto 0;
+	padding: 8%;
+	position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.sidebar-list {
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: max-content;
+    /* max-width: 90%; */
+    margin: 0 auto;
+    height: max-content;
+    color: $navbutton;
+}
+
+.sidebar-list > ul {
+
+    display: flex;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+    padding: 0;
+    margin: 0;
+	list-style: none;
+	justify-content: center;
+
+}
+
+.sidebar-list > ul > a {
+
+    width: 64px;
+    height: 64px;
+    padding: 16px;
+    font-size: 64px;
+    color: $navbutton;
+    fill: $navbutton;
+    -webkit-transition: opacity .25s;
+    transition: opacity .25s;
+
+}
+
+.sidebar-list > ul > a:hover {
+
+    opacity: 0.6;
+}
+
+.sidebar-list > ul > a > li {
+
+    width: inherit;
+    height: inherit;
+    font-size: inherit;
+}

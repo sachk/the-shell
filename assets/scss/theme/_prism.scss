@@ -1,26 +1,169 @@
+/* ==========================================================================
+   12. Prismjs - Syntax Highlighting setup and monospaced Inconsolata-g font
+   ========================================================================== */
+
 @font-face {
-  font-family: 'Inconsolata-g';
-  src: url("../fonts/Inconsolata-g.woff2") format("woff2");
-  src: url("../fonts/Inconsolata-g.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-code {
-
-  font-family: "Inconsolata-g", Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace !important;
-
+    font-family: 'Inconsolata-g';
+    src: url("../fonts/Inconsolata-g.woff2") format("woff2");
+    src: url("../fonts/Inconsolata-g.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* Better scrollbars for code segments */
 pre::-webkit-scrollbar {
-
-  width: 5px;
-  height: 8px;
-  background-color: inherit;
+    width: 10px;
+    height: 10px;
+    background-color: inherit;
 }
 
 pre::-webkit-scrollbar-thumb {
+    background-color: $prism-scroll;
+}
 
-  background-color: $heading;
+code[class*="language-"],
+pre[class*="language-"] {
+    color: $prism-text;
+    background: none;
+    font-family: "Inconsolata-g", Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace !important;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: $prism-background;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: $prism-comment;
+}
+
+.token.punctuation {
+    color: $prism-punctuation;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+    color: $prism-attr-name;
+}
+
+.token.function-name {
+    color: $prism-function-name;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+    color: $prism-number_function_bool;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+    color: $prism-property_constant_class_symbol;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+    color: $prism-selector_keyword;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+    color: $prism-var_string_regex;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+    color: $prism-operator_entity_url;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+.token.inserted {
+    color: $prism-inserted;
+}
+
+.command-line-prompt {
+    border-right: 1px solid $prism-cmd-prompt-border;
+    display: block;
+    float: left;
+    font-size: 100%;
+    letter-spacing: -1px;
+    margin-right: 1em;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.command-line-prompt > span:before {
+    color: $prism-cmd-before;
+    content: ' ';
+    display: block;
+    padding-right: 0.8em;
+}
+
+.command-line-prompt > span[data-user]:before {
+    content: "[" attr(data-user) "@" attr(data-host) "] $";
+}
+
+.command-line-prompt > span[data-user="root"]:before {
+    content: "[" attr(data-user) "@" attr(data-host) "] #";
+}
+
+.command-line-prompt > span[data-prompt]:before {
+    content: attr(data-prompt);
 }

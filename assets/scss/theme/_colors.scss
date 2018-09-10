@@ -1,9 +1,14 @@
-$text: #B2B6BD;
-$background: #2b303b;
-$selection-text-and-header-background: #1c212b;
+$text: rgb(0, 0, 0);
+$background: #ffffff;
+$selection-text-and-header-background: #e0e0e0;
 $selection-background-and-link-hover: #a3be8c;
+$sidebar: #739a99;
 $heading: #739a99;
-$border: #424650;
+$navbutton: #363c4a;
+$post-background: #ebf2f6;
+
+$border: #000000;
+$sitetitle: #739a99;
 $sitetitle: #739a99;
 
 $contessa: #bf6165;
@@ -11,3 +16,42 @@ $comet: #4f586b;
 $river-bed: #424a5a;
 
 $silver: #ccc;
+
+$button-background: #e0e0e0;
+$subscribe-form-background: #f4f8fb;
+
+/*Prism Colours*/
+
+/* TOMMOROW NIGHT
+$scroll: #739a99;
+$prism-text: #ccc;
+$prism-background: #2d2d2d;
+$prism-comment: #999;
+$prism-punctuation: #ccc;
+$prism-attr-name: #e2777a;
+$prism-function-name: #6196cc;
+$prism-number_function_bool: #f08d49;
+$prism-property_constant_class_symbol: #f8c555;
+$prism-selector_keyword: #cc99cd;
+$prism-var_string_regex: #7ec699;
+$prism-operator_entity_url: #67cdcc;
+$prism-inserted: green;
+$prism-cmd-prompt-border: #999;
+$prism-cmd-before: #999;
+*/
+
+$prism-scroll: #739a99;
+$prism-text: #ccc;
+$prism-background: #2d2d2d;
+$prism-comment: #999;
+$prism-punctuation: #ccc;
+$prism-attr-name: #e2777a;
+$prism-function-name: #6196cc;
+$prism-number_function_bool: #f08d49;
+$prism-property_constant_class_symbol: #f8c555;
+$prism-selector_keyword: #cc99cd;
+$prism-var_string_regex: #7ec699;
+$prism-operator_entity_url: #67cdcc;
+$prism-inserted: green;
+$prism-cmd-prompt-border: #999;
+$prism-cmd-before: #999;

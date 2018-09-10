@@ -23,7 +23,9 @@ body {
     font-size: 2.0rem;
     line-height: 1.6em;
     color: $text;
-    background: $background
+    background: $background;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 ::selection {
@@ -43,6 +45,7 @@ body {
 @for $i from 1 through 6 {
     h#{$i} {
         @extend %heading;
+
         a {
             color: $heading;
         }
@@ -80,11 +83,11 @@ h6 {
 a {
     color: $contessa;
     transition: color ease 0.3s;
+
     &:hover {
         color: $selection-background-and-link-hover;
     }
 }
-
 
 p, ul, ol {
     margin: 1.6em 0;
@@ -110,28 +113,35 @@ blockquote {
     margin: 1.6em 0 1.6em -2.2em;
     padding: 0 0 0 1.6em;
     border-left: $comet 0.4em solid;
+
     p {
         margin: 0.8em 0;
         font-style: italic;
     }
+
     small {
         display: inline-block;
-        margin: 0.8em 0 0.8em 1.5em;;
-        font-size:0.9em;
+        margin: 0.8em 0 0.8em 1.5em;
+        font-size: 0.9em;
         color: $silver;
-        &:before { content: '\2014 \00A0'; }
+
+        &:before {
+            content: '\2014 \00A0';
+        }
     }
+
     cite {
-        font-weight:bold;
-        a { font-weight: normal; }
+        font-weight: bold;
+
+        a {
+            font-weight: normal;
+        }
     }
-
 }
-
-
 
 dl {
     margin: 1.6em 0;
+
     dt {
         float: left;
         width: 180px;
@@ -141,27 +151,23 @@ dl {
         text-overflow: ellipsis;
         white-space: nowrap;
         font-weight: bold;
-        margin-bottom: 1em
+        margin-bottom: 1em;
     }
 
     dd {
         margin-left: 200px;
-        margin-bottom: 1em
+        margin-bottom: 1em;
     }
-
 }
-
 
 mark {
     background-color: #ffc336;
 }
 
-
 pre {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 1.6em 0;
-    border: 1px solid $river-bed;
     width: 100%;
     padding: 10px;
     font-size: 0.8em;
@@ -191,16 +197,14 @@ kbd {
     font-weight: bold;
     background: #f4f4f4;
     border-radius: 4px;
-    box-shadow:
-        0 1px 0 rgba(0, 0, 0, 0.2),
-        0 1px 0 0 #fff inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;
 }
 
 table {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 1.6em 0;
-    width:100%;
+    width: 100%;
     max-width: 100%;
     background-color: transparent;
 }
@@ -214,7 +218,9 @@ table td {
     border-top: 1px solid $river-bed;
 }
 
-table th { color: #000; }
+table th {
+    color: #000;
+}
 
 table caption + thead tr:first-child th,
 table caption + thead tr:first-child td,
@@ -225,9 +231,13 @@ table thead:first-child tr:first-child td {
     border-top: 0;
 }
 
-table tbody + tbody { border-top: 2px solid #efefef; }
+table tbody + tbody {
+    border-top: 2px solid #efefef;
+}
 
-table table table { background-color: #fff; }
+table table table {
+    background-color: #fff;
+}
 
 table tbody > tr:nth-child(odd) > td,
 table tbody > tr:nth-child(odd) > th {
@@ -241,11 +251,49 @@ table.plain {
     }
 }
 
-
 button, input, select, textarea {
-    background: $comet;
+    background: $button-background;
     border: 1px solid $river-bed;
     color: $text;
-    outline-color: $contessa
+    outline-color: $contessa;
+}
 
+svg {
+    width: inherit;
+    height: inherit;
+}
+
+.blog-title {
+    color: black;
+    font-size: 12vh;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+input::placeholder {
+    opacity: 0.4;
+}
+
+.content {
+
+    overflow: auto;
+    flex-grow: 1;
+    min-width: 70%;
+}
+
+.content::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background-color: inherit;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: $prism-scroll;
+}
+
+.content-inner {
+
+    width: max-content;
+    height: max-content;
+    margin: 0 auto;
 }
