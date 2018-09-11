@@ -11,10 +11,11 @@
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
 
+    <a href="{{url}}">
     <article class="post-preview">
-        <header class=".post-info">
+        <header class="post-info">
             <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}}</span>
-            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+            <h2 class="post-title">{{{title}}}</h2>
 
             <!--<a href="{{url}}#disqus_thread"></a>-->
         </header>
@@ -22,6 +23,7 @@
             <p>{{excerpt}}&hellip;</p>
         </section>
     </article>
+    </a>
 
     {{/foreach}}
 

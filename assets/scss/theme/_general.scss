@@ -83,10 +83,6 @@ h6 {
 a {
     color: $contessa;
     transition: color ease 0.3s;
-
-    &:hover {
-        color: $selection-background-and-link-hover;
-    }
 }
 
 p, ul, ol {
