@@ -7,8 +7,8 @@
   src: url('../fonts/fontello.woff2') format('woff2'),
        url('../fonts/fontello.woff') format('woff');
 }
- 
-[class^="icon-"]:before, [class*=" icon-"]:before {
+
+[class^="icon-"], [class*=" icon-"] {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -20,7 +20,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
- 
+
 .icon-docker-hub:before { content: '\e800'; } /* '' */
 .icon-email:before { content: '\f0e0'; } /* '' */
 .icon-github:before { content: '\f113'; } /* '' */

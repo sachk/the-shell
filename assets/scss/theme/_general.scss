@@ -27,7 +27,7 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
-
+    
 ::selection {
     color: $selection-text-and-header-background;
     background: $selection-background-and-link-hover;
@@ -278,7 +278,8 @@ input::placeholder {
 
     overflow: auto;
     flex-grow: 1;
-    min-width: 70%;
+    width: 65%;
+    height: 100%;
 }
 
 .content::-webkit-scrollbar {
@@ -293,7 +294,5 @@ input::placeholder {
 
 .content-inner {
 
-    width: max-content;
-    height: max-content;
     margin: 0 auto;
 }

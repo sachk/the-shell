@@ -5,9 +5,9 @@
     	<div class="sidebar-list">
     	    <ul>
     			{{#foreach navigation}}
-				<a href="{{url absolute="true"}}">
-    			<li class="icon icon-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"></li>
-				</a>
+					<a href="{{url absolute="true"}}" class="sidebar-text">
+    					<li>{{label}}</li>
+					</a>
     			{{/foreach}}
     	    </ul>
     	</div>
