@@ -4,11 +4,7 @@
 
 .subscribe-form {
     margin: 0 auto;
-    padding: 6.5vw 7vw 7vw;
-    border: 1px solid #edf4f8;
     text-align: center;
-    background: $subscribe-form-background;
-    border-radius: 7px;
 }
 
 .subscribe-form > form {
@@ -20,7 +16,8 @@
     align-items: center;
     margin: 0 auto;
     max-width: 420px;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
+	color: $text;
 }
 
 .subscribe-form > form > .form-group {
@@ -33,7 +30,6 @@
     padding: 10px 0;
     padding-left: 12px;
     width: 100%;
-    border: 1px solid #dae2e7;
     color: #738a94;
     font-size: 1.8rem;
     line-height: 1em;
@@ -60,10 +56,11 @@
     font-weight: 400;
     text-align: center;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
-    background: linear-gradient(#4fb7f0, #29a0e0 60%, #29a0e0 90%, #36a6e2);
     border-radius: 5px;
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.14);
-    -webkit-font-smoothing: subpixel-antialiased;
+	-webkit-font-smoothing: subpixel-antialiased;
+	color: $text;
+
 }
 
 .subscribe-form * {
